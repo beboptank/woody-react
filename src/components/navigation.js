@@ -11,12 +11,14 @@ class Navigation extends React.Component {
 
     render() {
         return (
-            <Menu>
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="drinkmenu" className="menu-item" href="/menu">Menu</a>
-                <a id="events" className="menu-item" href="/events">Events</a>
-                <a id="contact" className="menu-item" href="/contact">Contact</a>
-            </Menu>
+            <div className="navcontainer">
+                <Menu>
+                    <a id="home" className="menu-item" href="/">Home</a>
+                    <a id="drinkmenu" className="menu-item" href="/menu">Menu</a>
+                    <a id="events" className="menu-item" href="/events">Events</a>
+                    <a id="contact" className="menu-item" href="/contact">Contact</a>
+                </Menu>
+            </div>
         );
     }
 }

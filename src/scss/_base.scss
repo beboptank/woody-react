@@ -1,3 +1,6 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css?family=Crete+Round|Raleway&display=swap');
+
 /* Modern CSS Reset by Andy Bell */
 /* Box sizing rules */
 *,
@@ -81,3 +84,8 @@ select {
 /* Custom Variables */
 
 $main-background: url('../images/woody-flower-background.jpg');
+
+$navburger-color: #e1ad01;
+
+$main-font: 'Crete Round', serif;
+$secondary-font: 'Raleway', sans-serif; 
