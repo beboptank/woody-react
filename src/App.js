@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <Navigation right />
       <LogoBanner />
-      <SectionHero header={`Refreshing cocktails and beer. Delicious curry.`}/>
-      <SectionHero header={`Come on in - it's always party time at woody.`} />
-      <SectionHero header={`Say cheese and cheers with good friends and drinks.`} />
+      <SectionHero heroName="menuHero" header={`Refreshing cocktails and beer. Delicious curry.`}/>
+      <SectionHero heroName="eventHero" header={`Come on in - it's always party time at woody.`} />
+      <SectionHero heroName="galleryHero" header={`Say cheese and cheers with good friends and drinks.`} />
     </div>
   );
 }

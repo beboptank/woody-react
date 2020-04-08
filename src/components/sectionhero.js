@@ -1,9 +1,9 @@
 import React from 'react';
 import "../scss/_components.scss";
 
-const SectionHero = ({ header }) => {
+const SectionHero = ({ header, heroName }) => {
     return (
-        <div className="herocontainer">
+        <div id={ heroName } className="herocontainer">
             <h1>{ header }</h1>
         </div>
     )
