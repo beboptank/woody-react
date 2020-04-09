@@ -20,7 +20,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: $navburger-color;
+  background: $mustardyellow;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -94,4 +94,26 @@ Note: Beware of modifying this element as it can break the animations - you shou
 #galleryHero {
   background-image: url($galleryhero-imagepath);
   @include hero-background-image;
+}
+
+/*====== Link Button Styles ======*/
+.linkbuttoncontainer {
+  &__button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    color: $mustardyellow;
+    border: 3px solid $mustardyellow;
+    border-radius: 4px;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .5s;
+  }
+
+  &__button:hover {
+    color: black;
+    background-color: $mustardyellow;
+    transition: .5s;
+  }
 }
