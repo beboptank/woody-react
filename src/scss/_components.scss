@@ -81,8 +81,24 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /*====== Hero Styles ======*/
+.herocontainer {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: $main-font;
+  color: white;
+  -webkit-text-stroke: 1.5px black;
+  font-size: 1.3rem;
+
+  &__items {
+    width: 50%;
+    text-align: center;
+    margin: 1rem;
+  }
+}
+
 #menuHero {
   background-image: url($menuhero-imagepath);
+  align-items: flex-end;
   @include hero-background-image;
 }
 
@@ -93,6 +109,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 #galleryHero {
   background-image: url($galleryhero-imagepath);
+  align-items: flex-end;
   @include hero-background-image;
 }
 
@@ -107,7 +124,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
     border-radius: 4px;
     font-family: $secondary-font;
     font-size: 1.5rem;
-    font-weight: bold;
     transition: .5s;
   }
 
