@@ -111,5 +111,7 @@ $galleryhero-imagepath: '../images/guitar.jpg';
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
 }
