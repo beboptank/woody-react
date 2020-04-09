@@ -83,26 +83,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /*====== Hero Styles ======*/
 #menuHero {
   background-image: url($menuhero-imagepath);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  @include hero-background-image;
 }
 
 #eventHero {
   background-image: url($eventhero-imagepath);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  @include hero-background-image;
 }
 
 #galleryHero {
   background-image: url($galleryhero-imagepath);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vw;
+  @include hero-background-image;
 }

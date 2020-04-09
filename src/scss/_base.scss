@@ -94,3 +94,22 @@ $mainhero-imagepath: '../images/woodyMainHero.jpg';
 $menuhero-imagepath: '../images/beverage.jpg';
 $eventhero-imagepath: '../images/party.jpg';
 $galleryhero-imagepath: '../images/guitar.jpg';
+
+
+
+/* Custom Mixins */
+@mixin full-background {
+  background: url('$main-background') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin hero-background-image {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
