@@ -88,11 +88,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   font-family: $main-font;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 
   &__items {
     text-align: center;
     &__header {
+      padding: 0 1rem 5rem 1rem;
       -webkit-text-stroke: 2px black;
     }
   }
@@ -100,7 +101,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 #menuHero {
   background-image: url($menuhero-imagepath);
-  align-items: flex-end;
   @include hero-background-image;
 }
 
@@ -111,7 +111,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 #galleryHero {
   background-image: url($galleryhero-imagepath);
-  align-items: flex-end;
   @include hero-background-image;
 }
 
@@ -119,13 +118,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .linkbuttoncontainer {
   &__button {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem 3rem;
     color: $mustardyellow;
     border: 3px solid $mustardyellow;
     border-radius: 4px;
     font-family: $secondary-font;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
     transition: .5s;
   }
 
