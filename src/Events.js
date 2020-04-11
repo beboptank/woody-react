@@ -3,15 +3,12 @@ import moment from 'moment';
 import { gapi } from 'gapi-script';
 
 
-
 class Events extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: moment().format("dd, Do MMMM, h:mm A"),
+            time: moment().format("dddd, MMMM Do, h:mm A"),
             events: [],
-            isBusy: false,
-            isEmpty: false,
             isLoading: true
         }
     }
@@ -35,24 +32,13 @@ class Events extends Component {
             .then(
                 response => {
                     let events = response.result.items;
-                    let sortedEvents = events.sort(function(a, b) {
-                        return (
-                            moment(b.start.dateTime).format("YYYYMMDD") - 
-                            moment(a.start.dateTime).format("YYYYMMDD")
-                        );
-                    });
+                    console.log(events);
                     if (events.length > 0) {
                         that.setState({
-                            events: sortedEvents
-                        },
-                        () => {
-                            that.setStatus();
-                        }
-                        );
+                            events: events
+                        });
                     } else {
                         that.setState({
-                            isBusy: false,
-                            isEmpty: false,
                             isLoading: true
                         });
                     }
@@ -65,64 +51,32 @@ class Events extends Component {
         gapi.load("client", start);
     }
 
-
-    setStatus = () => {
-        let now = moment();
-        let events = this.state.events;
-        for (var e = 0; e < events.length; e++) {
-            var eventItem = events[e];
-            if (
-                moment(now).isBetween(
-                    moment(eventItem.start.dateTime),
-                    moment(eventItem.end.dateTime)
-                )
-            ) {
-                this.setState({
-                    isBusy: true
-                });
-                return false;
-            } else {
-                this.setState({
-                    isBusy: false
-                });
-            }
-        }
-    }
-
     render() {
         const { time, events } = this.state;
 
         let eventsList = events.map(function (event) {
             return (
-                <a
-                    className="list-group-item"
-                    href={event.htmlLink}
-                    target="_blank"
+                <div
                     key={event.id}
+                    className=""
                 >
-                    {event.summary}{" "}
-                    <span className="badge">
-                        {moment(event.start.dateTime).format("h:mm a")},{" "}
-                        {moment(event.end.dateTime).diff(
-                            moment(event.start.dateTime),
-                            "minutes"
-                        )}{" "}
-            minutes, {moment(event.start.dateTime).format("MMMM Do")}{" "}
-                    </span>
-                </a>
+                    <h2>{event.summary}{" "}</h2>
+                    <p>{event.description}</p>
+                    <h3>{moment(event.start.dateTime).format("h:mm a")}</h3>
+                    <h3>{moment(event.start.dateTime).format("MMMM Do, YYYY")}</h3>
+                </div>
             );
         });
 
 
         return (
-            <div className="container">
-                <div className="upcoming-meetings">
-                    <div className="current-time">{time}</div>
+            <div className="eventscontainer">
+                <div className="current-time">{time}</div>
+                <div className="eventscontainer__upcomingevents">
                     <h1>Upcoming Events</h1>
-                    <div className="list-group">
+                    <div className="eventscontainer__upcomingevents__list">
                         {this.state.isLoading}
                         {events.length > 0 && eventsList}
-                        {this.state.isEmpty}
                     </div>
                 </div>
             </div>
