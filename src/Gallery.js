@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Gallery = () => {
-    return (
-        <h1>Hello gallery</h1>
-    )
+class Gallery extends Component {
+    render() {
+        return (
+            <h1>Gallery</h1>
+        )
+    }
 }
 
 export default Gallery;
