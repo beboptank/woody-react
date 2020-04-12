@@ -3,6 +3,8 @@ import moment from 'moment';
 import { gapi } from 'gapi-script';
 
 
+
+
 class Events extends Component {
     constructor(props) {
         super(props);
@@ -58,7 +60,7 @@ class Events extends Component {
             return (
                 <div
                     key={event.id}
-                    className=""
+                    className="eventscontainer__timeandlist__upcomingevents__list__item"
                 >
                     <h2>{event.summary}{" "}</h2>
                     <p>{event.description}</p>
@@ -71,12 +73,14 @@ class Events extends Component {
 
         return (
             <div className="eventscontainer">
-                <div className="current-time">{time}</div>
-                <div className="eventscontainer__upcomingevents">
-                    <h1>Upcoming Events</h1>
-                    <div className="eventscontainer__upcomingevents__list">
-                        {this.state.isLoading}
-                        {events.length > 0 && eventsList}
+                <div className="eventscontainer__timeandlist">
+                    <div className="eventscontainer__timeandlist__currenttime">{time}</div>
+                    <div className="eventscontainer__timeandlist__upcomingevents">
+                        <h1 className="eventscontainer__timeandlist__upcomingevents__header">Upcoming Events</h1>
+                        <div className="eventscontainer__timeandlist__upcomingevents__list">
+                            {this.state.isLoading}
+                            {events.length > 0 && eventsList}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -217,9 +217,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
     font-size: 3rem;
     font-family: $main-font;
     padding: .5rem 1rem 0 1rem;
-    color: white;
+    
+  }color: white;
     -webkit-text-stroke: 2px black;
-  }
 
   &__linkscontainer {
     display: flex;
@@ -286,3 +286,48 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /*====== Events Page Styles ======*/
+.eventscontainer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: $main-background;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__timeandlist {
+    padding: 1rem;
+
+    &__currenttime {
+    font-family: $secondary-font;
+    padding: 2rem 0 1rem 0;
+    color: white;
+  }
+
+  &__upcomingevents {
+    padding-bottom: 2rem;
+    &__header {
+      font-family: $main-font;
+      color: white;
+      -webkit-text-stroke: 2px black;
+    }
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+
+      &__item {
+        background-color: $mustardyellow;
+        font-family: $secondary-font;
+        padding: 1rem;
+        margin: 1rem 1rem 0 1rem;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+    }
+
+  }
+
+  }
+}
