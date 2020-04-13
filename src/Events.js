@@ -4,7 +4,6 @@ import { gapi } from 'gapi-script';
 
 
 
-
 class Events extends Component {
     constructor(props) {
         super(props);
