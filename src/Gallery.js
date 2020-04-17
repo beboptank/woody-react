@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 let Flickr = require('flickr-sdk');
 
-let flickr = new Flickr('');
+
 
 class Gallery extends Component {
     constructor(props) {
@@ -34,7 +34,7 @@ class Gallery extends Component {
     render() {
         const { photos, noPhotos } = this.state;
         return (
-            <h1>Gallery currently under construction</h1>
+            <h1>Gallery</h1>
         )
     }
 }

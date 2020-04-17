@@ -1,6 +1,6 @@
 import React from 'react';
 import "../scss/_components.scss";
-import logo from '../images/woody.jpg';
+import logo from '../images/woody.png';
 
 const LogoBanner = () => {
     return (

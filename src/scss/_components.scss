@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
   background-color: #241a19;
+  
+  &__image {
+    width: 190px;
+  }
 }
 
 /*====== Navigation Styles ======*/
