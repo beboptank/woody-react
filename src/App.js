@@ -1,6 +1,5 @@
 import React from 'react';
 import LogoBanner from '../src/components/logobanner';
-import Navigation from '../src/components/navigation';
 import Home from './Home';
 import Menu from './Menu';
 import Events from './Events';
@@ -14,7 +13,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navigation />
         <LogoBanner />
         <Switch>
           <Route path="/" component={Home} exact />

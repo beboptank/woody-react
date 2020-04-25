@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Navigation from '../src/components/navigation';
 import moment from 'moment';
 import { gapi } from 'gapi-script';
-
 
 
 class Events extends Component {
@@ -71,14 +71,17 @@ class Events extends Component {
 
 
         return (
-            <div className="eventscontainer">
-                <div className="eventscontainer__timeandlist">
-                    <div className="eventscontainer__timeandlist__currenttime">{time}</div>
-                    <div className="eventscontainer__timeandlist__upcomingevents">
-                        <h1 className="eventscontainer__timeandlist__upcomingevents__header">Upcoming Events</h1>
-                        <div className="eventscontainer__timeandlist__upcomingevents__list">
-                            {this.state.isLoading}
-                            {events.length > 0 && eventsList}
+            <div>
+                <Navigation />
+                <div className="eventscontainer">
+                    <div className="eventscontainer__timeandlist">
+                        <div className="eventscontainer__timeandlist__currenttime">{time}</div>
+                        <div className="eventscontainer__timeandlist__upcomingevents">
+                            <h1 className="eventscontainer__timeandlist__upcomingevents__header">Upcoming Events</h1>
+                            <div className="eventscontainer__timeandlist__upcomingevents__list">
+                                {this.state.isLoading}
+                                {events.length > 0 && eventsList}
+                            </div>
                         </div>
                     </div>
                 </div>

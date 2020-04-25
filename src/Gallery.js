@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navigation from '../src/components/navigation';
 
 class Gallery extends Component {
     constructor(props) {
@@ -37,10 +38,13 @@ class Gallery extends Component {
 
     render() {
         return (
-            <div className="gallerycontainer">
-                <h1 className="gallerycontainer__header">Gallery</h1>
-                <div className="gallerycontainer__photogallery">
-                    {this.state.photos}
+            <div>
+                <Navigation />
+                <div className="gallerycontainer">
+                    <h1 className="gallerycontainer__header">Gallery</h1>
+                    <div className="gallerycontainer__photogallery">
+                        {this.state.photos}
+                    </div>
                 </div>
             </div>
         )

@@ -5,15 +5,17 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 class Navigation extends React.Component {
+
     showSettings (event) {
         event.preventDefault();
     }
 
-
     render() {
         return (
             <div className="navcontainer">
-                <Menu>
+                <Menu 
+                    isOpen={ false }
+                >
                     <Link id="home" className="menu-item" to="/">Home</Link>
                     <Link id="drinkmenu" className="menu-item" to="/menu">Menu</Link>
                     <Link id="events" className="menu-item" to="/events">Events</Link>
