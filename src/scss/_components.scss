@@ -342,4 +342,31 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    font-family: $main-font;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-size: 3rem;
+  }
+
+  &__photogallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+
+    &__photo {
+      padding: 3px;
+      border: 5px solid $mustardyellow;
+      border-radius: 5px;
+      background-color: black;
+      margin: 1rem 0 1rem 0;
+    }
+  }
 }
