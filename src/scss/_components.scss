@@ -335,3 +335,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   }
 }
+
+/*====== Gallery Page Styles ======*/
+.gallerycontainer {
+  background-image: $main-background;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

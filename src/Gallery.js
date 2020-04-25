@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-let Flickr = require('flickr-sdk');
-
-
 
 class Gallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            photos: [],
-            noPhotos: false
-        }
+            photos: []
+        };
     }
 
     componentDidMount = () => {
@@ -17,24 +13,34 @@ class Gallery extends Component {
     }
 
     getPhotos() {
-        flickr.people.getPublicPhotos({
-            user_id: '187976999@N08'
+        fetch('https://www.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=API_KEY&user_id=187976999@N08&format=json&nojsoncallback=1')
+        .then((res) => {
+            return res.json();
         })
-        .then(function (res) {
-            console.log('nice!', res.body);
+        .then((data) => {
+            let galleryArray = data.photos.photo.map((image) => {
+                var source = "https://farm"+image.farm+".staticflickr.com/"+image.server+"/"+image.id+"_"+image.secret+".jpg";
+                return (
+                    <div>
+                        <img alt="woody Gallery" src={source}></img>
+                    </div>
+                )
+            })
             this.setState({
-                photos: res.body.photos.photo
+                photos: galleryArray
             });
         })
-        .catch(function (err) {
-            console.log('no dice man', err);
+        .catch((err) => {
+            console.log(err)
         })
     }
 
     render() {
-        const { photos, noPhotos } = this.state;
         return (
-            <h1>Gallery</h1>
+            <div className="gallerycontainer">
+                <h1>Gallery</h1>
+                {this.state.photos}
+            </div>
         )
     }
 }
