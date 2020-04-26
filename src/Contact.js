@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../src/components/navigation';
+import LogoBanner from '../src/components/logobanner';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
@@ -8,6 +9,7 @@ const Contact = () => {
     return (
         <div>
             <Navigation />
+            <LogoBanner />
             <div className="contactcontainer">
                 <h1 className="contactcontainer__header">Contact</h1>
                 <div className="contactcontainer__linkscontainer">

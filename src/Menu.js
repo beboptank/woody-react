@@ -1,11 +1,13 @@
 import React from 'react';
 import Navigation from '../src/components/navigation';
+import LogoBanner from '../src/components/logobanner';
 import './scss/_components.scss';
 
 const Menu = () => {
     return (
         <div>
             <Navigation />
+            <LogoBanner />
             <div className="menucontainer">
                 <h1 className="menucontainer__header">Menu</h1>
                 <div className="menucontainer__blackboard">

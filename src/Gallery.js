@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../src/components/navigation';
+import LogoBanner from '../src/components/logobanner';
 
 class Gallery extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ class Gallery extends Component {
         return (
             <div>
                 <Navigation />
+                <LogoBanner />
                 <div className="gallerycontainer">
                     <h1 className="gallerycontainer__header">Gallery</h1>
                     <div className="gallerycontainer__photogallery">

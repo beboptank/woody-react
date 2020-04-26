@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../src/components/navigation';
+import LogoBanner from '../src/components/logobanner';
 import moment from 'moment';
 import { gapi } from 'gapi-script';
 
@@ -73,6 +74,7 @@ class Events extends Component {
         return (
             <div>
                 <Navigation />
+                <LogoBanner />
                 <div className="eventscontainer">
                     <div className="eventscontainer__timeandlist">
                         <div className="eventscontainer__timeandlist__currenttime">{time}</div>

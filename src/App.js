@@ -1,5 +1,4 @@
 import React from 'react';
-import LogoBanner from '../src/components/logobanner';
 import Home from './Home';
 import Menu from './Menu';
 import Events from './Events';
@@ -13,7 +12,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <LogoBanner />
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/menu" component={Menu} />
