@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import '../scss/_components.scss';
 
-export default function Button({ text, linkTo }) {
+const Button = ({ text, linkTo }) => {
     return (
         <div className='linkbuttoncontainer'>
-            <a href={linkTo}>
+            <Link to={linkTo}>
                 <button className='linkbuttoncontainer__button' type='button'>{text}</button>
-            </a>
+            </Link>
         </div>
     )
 }
+
+export default withRouter(Button)
 
 Button.defaultProps = {
     text: "Woody",

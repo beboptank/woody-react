@@ -360,14 +360,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 3rem 2rem 2rem;
 
     &__photo {
-      padding: 3px;
+      padding: .5rem;
       border: 5px solid $mustardyellow;
       border-radius: 5px;
       background-color: black;
-      margin: 1rem 0 1rem 0;
+      margin: 1rem;
     }
   }
 }
