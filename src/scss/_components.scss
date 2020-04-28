@@ -371,3 +371,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
     }
   }
 }
+
+#google_translate_element {
+  display: flex;
+  flex-flow: column nowrap;
+}

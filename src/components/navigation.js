@@ -21,6 +21,7 @@ class Navigation extends React.Component {
                     <Link id="events" className="menu-item" to="/events">Events</Link>
                     <Link id="gallery" className="menu-item" to="/gallery">Gallery</Link>
                     <Link id="contact" className="menu-item" to="/contact">Contact</Link>
+                    <div id="google_translate_element"></div>
                 </Menu>
             </div>
         );
