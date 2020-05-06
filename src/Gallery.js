@@ -12,7 +12,7 @@ class Gallery extends Component {
 
     componentDidMount() {
         const thisPointer = this;
-        fetch('http://localhost:3000/gallery', {
+        fetch('https://mighty-fjord-28148.herokuapp.com/gallery', {
             method: 'get',
             mode: 'cors',
             headers: { 'Content-Type': 'text/plain' },

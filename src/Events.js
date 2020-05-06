@@ -16,7 +16,7 @@ class Events extends Component {
 
     componentDidMount() {
         const thisPointer = this;
-        fetch('http://localhost:3000/events', {
+        fetch('https://mighty-fjord-28148.herokuapp.com/events', {
             method: 'get',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify()
