@@ -10,34 +10,35 @@ class Gallery extends Component {
         };
     }
 
-    componentDidMount = () => {
-        this.getPhotos();
-    }
-
-    getPhotos() {
-        fetch('https://www.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=API_KEY&user_id=187976999@N08&format=json&nojsoncallback=1')
-        .then((res) => {
-            return res.json();
+    componentDidMount() {
+        const thisPointer = this;
+        fetch('http://localhost:3000/gallery', {
+            method: 'get',
+            mode: 'cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify()
         })
-        .then((data) => {
-            let galleryArray = data.photos.photo.map((image) => {
-                var source = "https://farm"+image.farm+".staticflickr.com/"+image.server+"/"+image.id+"_"+image.secret+".jpg";
-                return (
-                    <div>
-                        <img className="gallerycontainer__photogallery__photo" alt="woody Gallery" src={source}></img>
-                    </div>
-                )
-            })
-            this.setState({
-                photos: galleryArray
-            });
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+            .then(response => response.json())
+            .then(response => JSON.parse(response.text))
+            .then(text => thisPointer.setState({
+                photos: text.photos.photo
+            }));
     }
 
     render() {
+        const { photos } = this.state;
+
+        let displayPhotos = photos.map(function (photo) {
+            return (
+                <img 
+                key={photo.id}
+                src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+                alt={photo.title}
+                className="gallerycontainer__photogallery__photo"
+                ></img>
+            )
+        })
+
         return (
             <div>
                 <Navigation />
@@ -45,7 +46,7 @@ class Gallery extends Component {
                 <div className="gallerycontainer">
                     <h1 className="gallerycontainer__header">Gallery</h1>
                     <div className="gallerycontainer__photogallery">
-                        {this.state.photos}
+                        {photos.length > 0 && displayPhotos}
                     </div>
                 </div>
             </div>

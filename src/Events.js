@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Navigation from '../src/components/navigation';
 import LogoBanner from '../src/components/logobanner';
 import moment from 'moment';
-import { gapi } from 'gapi-script';
-
 
 
 class Events extends Component {
@@ -16,42 +14,17 @@ class Events extends Component {
         }
     }
 
-    componentDidMount = () => {
-        this.getEvents();
-    }
-
-    getEvents() {
-        let that = this;
-        function start() {
-            gapi.client
-            .init({
-                apiKey: API_KEY
-            })
-            .then(function() {
-                return gapi.client.request({
-                    path: `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?maxResults=11`
-                });
-            })
-            .then(
-                response => {
-                    let events = response.result.items;
-                    console.log(events);
-                    if (events.length > 0) {
-                        that.setState({
-                            events: events
-                        });
-                    } else {
-                        that.setState({
-                            isLoading: true
-                        });
-                    }
-                },
-                function (reason) {
-                    console.log(reason);
-                }
-            );
-        }
-        gapi.load("client", start);
+    componentDidMount() {
+        const thisPointer = this;
+        fetch('http://localhost:3000/events', {
+            method: 'get',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify()
+        })
+            .then(response => response.json())
+            .then(response => thisPointer.setState({
+                events: response.data.items
+            }));
     }
 
     render() {
