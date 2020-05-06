@@ -4,10 +4,11 @@
 .bannercontainer {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   background-color: #241a19;
   
   &__image {
-    width: 250px;
+    width: 200px;
     height: auto;
   }
 }
