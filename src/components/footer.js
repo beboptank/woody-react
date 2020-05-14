@@ -6,7 +6,6 @@ const Footer = () => {
         <div className="footercontainer">
             <ul className="footercontainer__list">
                 <li><Link className="footercontainer__list__listitem" to="/">Home</Link></li> |
-                <li><Link className="footercontainer__list__listitem" to="/menu">Menu</Link></li> |
                 <li><Link className="footercontainer__list__listitem" to="/events">Events</Link></li> |
                 <li><Link className="footercontainer__list__listitem" to="/gallery">Gallery</Link></li> |
                 <li><Link className="footercontainer__list__listitem" to="/contact">Contact</Link></li>

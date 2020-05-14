@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from './Home';
-import Menu from './Menu';
 import Events from './Events';
 import Gallery from './Gallery';
 import Contact from './Contact';
@@ -14,7 +13,6 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/menu" component={Menu} />
           <Route path="/events" component={Events} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
