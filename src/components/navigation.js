@@ -16,10 +16,10 @@ class Navigation extends React.Component {
                 <Menu 
                     isOpen={ false }
                 >
-                    <Link id="home" className="menu-item" to="/">Home</Link>
-                    <Link id="events" className="menu-item" to="/events">Events</Link>
-                    <Link id="gallery" className="menu-item" to="/gallery">Gallery</Link>
-                    <Link id="contact" className="menu-item" to="/contact">Contact</Link>
+                    <Link id="home" className="menu-item" to="/">home</Link>
+                    <Link id="events" className="menu-item" to="/events">events</Link>
+                    <Link id="gallery" className="menu-item" to="/gallery">gallery</Link>
+                    <Link id="contact" className="menu-item" to="/contact">contact</Link>
                     <div id="google_translate_element"></div>
                 </Menu>
             </div>

@@ -51,7 +51,10 @@ class Events extends Component {
                 <LogoBanner />
                 <div className="eventscontainer">
                     <div className="eventscontainer__timeandlist">
-                        <div className="eventscontainer__timeandlist__currenttime">{time}</div>
+                        <div className="eventscontainer__timeandlist__currenttime">
+                        {time}<br/>
+                        Please wait for events to load.
+                        </div>
                         <div className="eventscontainer__timeandlist__upcomingevents">
                             <h1 className="eventscontainer__timeandlist__upcomingevents__header">Upcoming Events</h1>
                             <div className="eventscontainer__timeandlist__upcomingevents__list">
