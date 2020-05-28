@@ -94,13 +94,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
   font-family: $main-font;
   color: white;
-  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  font-size: 2rem;
 
   &__items {
     text-align: center;
     &__header {
       padding: 0 1rem 5rem 1rem;
-      -webkit-text-stroke: 2px black;
     }
   }
 }

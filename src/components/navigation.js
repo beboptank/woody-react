@@ -11,9 +11,15 @@ class Navigation extends React.Component {
     }
 
     render() {
+
+        let nav = document.getElementsByClassName('navcontainer__burgermenu');
+
+
+
         return (
             <div className="navcontainer">
                 <Menu 
+                    className="navcontainer__burgermenu"
                     isOpen={ false }
                 >
                     <Link id="home" className="menu-item" to="/">home</Link>
