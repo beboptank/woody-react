@@ -22,7 +22,7 @@ const Contact = () => {
                         <p className="contactcontainer__linkscontainer__instagram__text">Instagram</p>
                     </div>
                     <div className="contactcontainer__linkscontainer__phone">
-                        <a><FontAwesomeIcon className="contactcontainer__icon" icon={faPhoneSquare} /></a>
+                        <FontAwesomeIcon className="contactcontainer__icon" icon={faPhoneSquare} />
                         <p className="contactcontainer__linkscontainer__phone__number">090-6608-8099</p>
                     </div>
                 </div>

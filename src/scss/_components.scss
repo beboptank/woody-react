@@ -27,6 +27,8 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: black;
+  border: solid $mustardyellow 2px;
+  border-radius: 1px;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -93,7 +95,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   flex-flow: column nowrap;
   justify-content: center;
   font-family: $main-font;
-  color: white;
+  color: black;
   letter-spacing: 1rem;
   font-size: 2rem;
 
@@ -101,6 +103,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     text-align: center;
     &__header {
       padding: 0 1rem 5rem 1rem;
+      -webkit-text-stroke: 2px $mustardyellow;
     }
   }
 }

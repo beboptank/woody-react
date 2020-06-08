@@ -4,17 +4,13 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 
-class Navigation extends React.Component {
+class Navigation extends Component {
 
     showSettings (event) {
         event.preventDefault();
     }
 
     render() {
-
-        let nav = document.getElementsByClassName('navcontainer__burgermenu');
-
-
 
         return (
             <div className="navcontainer">
