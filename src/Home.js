@@ -9,8 +9,8 @@ const Home = () => {
         <div>
             <Navigation />
             <LogoBanner />
-            <SectionHero buttonText={`events`} linkTo={`/events`} heroName="eventHero" header={`party night`} />
-            <SectionHero buttonText={`gallery`} linkTo={`/gallery`} heroName="galleryHero" header={`say cheese!`} />
+            <SectionHero buttonText={`events`} linkTo={`/events`} heroName="eventHero" header={`In here, it's summer all year round.`} />
+            <SectionHero buttonText={`gallery`} linkTo={`/gallery`} heroName="galleryHero" header={`Here's to feeling good all the time.`} />
         </div>
     )
 }
