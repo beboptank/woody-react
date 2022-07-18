@@ -1,4 +1,5 @@
 {
+  "homepage": "https://beboptank.github.io/woody-react/",
   "name": "woody-react",
   "version": "0.1.0",
   "private": true,
@@ -18,6 +19,7 @@
     "fb-react-sdk": "^1.0.4",
     "flickr-sdk": "^3.9.0",
     "gapi-script": "^1.0.2",
+    "gh-pages": "^4.0.0",
     "i18next": "^19.4.4",
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
@@ -37,6 +39,8 @@
     "superagent": "^5.2.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
