@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/woody-react/static/css/main.d2f47375.chunk.css",
+    "main.js": "/woody-react/static/js/main.0d6ab46f.chunk.js",
+    "main.js.map": "/woody-react/static/js/main.0d6ab46f.chunk.js.map",
+    "runtime-main.js": "/woody-react/static/js/runtime-main.e7115a3a.js",
+    "runtime-main.js.map": "/woody-react/static/js/runtime-main.e7115a3a.js.map",
+    "static/js/2.2e338f37.chunk.js": "/woody-react/static/js/2.2e338f37.chunk.js",
+    "static/js/2.2e338f37.chunk.js.map": "/woody-react/static/js/2.2e338f37.chunk.js.map",
+    "index.html": "/woody-react/index.html",
+    "precache-manifest.dcfcadadcbff97afc0cfb7cb152bca42.js": "/woody-react/precache-manifest.dcfcadadcbff97afc0cfb7cb152bca42.js",
+    "service-worker.js": "/woody-react/service-worker.js",
+    "static/css/main.d2f47375.chunk.css.map": "/woody-react/static/css/main.d2f47375.chunk.css.map",
+    "static/js/2.2e338f37.chunk.js.LICENSE.txt": "/woody-react/static/js/2.2e338f37.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/woody-react/static/media/woody-flower-background.10896216.jpg",
+    "static/media/woody.png": "/woody-react/static/media/woody.0c8becd9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7115a3a.js",
+    "static/js/2.2e338f37.chunk.js",
+    "static/css/main.d2f47375.chunk.css",
+    "static/js/main.0d6ab46f.chunk.js"
+  ]
+}
