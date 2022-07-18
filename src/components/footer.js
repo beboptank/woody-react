@@ -11,7 +11,7 @@ const Footer = () => {
                 <li><Link className="footercontainer__list__listitem" to="/contact">contact</Link></li>
             </ul>
             <p className="footercontainer__list__copyright">
-                &copy; 2020{new Date().getFullYear() > 2020 && document.write("-" + new Date().getFullYear())}, woody. Created by Seth Christmus with ❤️, ☕, and React.
+                &copy; 2020 - 2022, woody. Created by Seth Christmus with ❤️, ☕, and React.
             </p>
         </div>
     )
