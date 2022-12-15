@@ -15,7 +15,7 @@
     "body-parser": "^1.19.0",
     "cldr-data": "^36.0.0",
     "css-loader": "^3.5.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fb-react-sdk": "^1.0.4",
     "flickr-sdk": "^3.9.0",
     "gapi-script": "^1.0.2",
